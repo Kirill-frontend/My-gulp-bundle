@@ -1,0 +1,44 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+
+  }
+}
+
+@import 'vendor/reset';
+@import 'vendor/splide/themes/splide-skyblue.min';
+@import 'fonts';
+@import 'vars';
+
+
+body {
+  background-color: $white;
+  font-family: $primaryFont;    
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: calc(#{$widthContainer} + 20px) ;
+  margin: 0 auto;    
+  padding: 0 10px;
+}
+
+.main {
+  padding: calc(#{$headerHeight} + 10px) 0 0 0;
+  // padding: $headerHeight 0 0 0;
+}
+
+@import 'header';
+@import 'footer';
+

@@ -1,0 +1,28 @@
+.tabs_main {
+  .tabs_titles {
+    .tab_list {
+      button {
+        &:hover {
+        }
+        &:active {
+        }
+        &:focus {
+        }
+      }
+    }
+  }
+  .tabs_content {
+    .tab_list_content {
+      position: relative;
+      .tab_content {
+        transition: all ease-in .7s;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
